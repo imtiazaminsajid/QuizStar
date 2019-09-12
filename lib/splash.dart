@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'dart:async';
+import 'package:quiz_master/home.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -6,6 +8,16 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+      Timer(Duration(seconds: 3), (){
+        Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => HomePage(),));
+      });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
